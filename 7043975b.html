@@ -1,13 +1,11 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>数据库学习.md | Reckless</title><meta name="author" content="Bihanso"><meta name="copyright" content="Bihanso"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据库Linux安装先检查一下linu是否已经安装mysql 1sudo service mysql start 如果返回的是： 1mysql: unrecognized service 代表没有安装mysql，需要在线安装mysql。输入下面几行命令即可： 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端s">
-<meta property="og:type" content="article">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>数据库学习.md | Reckless</title><meta name="author" content="Bihanso"><meta name="copyright" content="Bihanso"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article">
 <meta property="og:title" content="数据库学习.md">
 <meta property="og:url" content="http://bihanso.github.io/7043975b.html">
 <meta property="og:site_name" content="Reckless">
-<meta property="og:description" content="数据库Linux安装先检查一下linu是否已经安装mysql 1sudo service mysql start 如果返回的是： 1mysql: unrecognized service 代表没有安装mysql，需要在线安装mysql。输入下面几行命令即可： 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端s">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://bihanso.github.io/img/a.png">
-<meta property="article:published_time" content="2023-02-05T09:02:12.000Z">
-<meta property="article:modified_time" content="2023-03-05T09:03:46.467Z">
+<meta property="article:published_time" content="2023-03-05T09:02:12.000Z">
+<meta property="article:modified_time" content="2023-03-05T09:03:46.463Z">
 <meta property="article:author" content="Bihanso">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://bihanso.github.io/img/a.png"><link rel="shortcut icon" href="/Bihanso.github.io/img/favicon.png"><link rel="canonical" href="http://bihanso.github.io/7043975b.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/Bihanso.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -55,7 +53,7 @@
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: true,
+  isToc: false,
   postUpdate: '2023-03-05 17:03:46'
 }</script><noscript><style type="text/css">
   #nav {
@@ -164,148 +162,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/Bihanso.github.io/img/a.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/Bihanso.github.io/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/Bihanso.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/Bihanso.github.io/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/Bihanso.github.io/" title="Reckless"><span class="site-name">Reckless</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据库学习.md</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-05T09:02:12.000Z" title="发表于 2023-02-05 17:02:12">2023-02-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-05T09:03:46.467Z" title="更新于 2023-03-05 17:03:46">2023-03-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库学习.md"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="Linux安装"><a href="#Linux安装" class="headerlink" title="Linux安装"></a>Linux安装</h2><p>先检查一下linu是否已经安装mysql</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql start</span><br></pre></td></tr></table></figure>
-<p>如果返回的是：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql: unrecognized service</span><br></pre></td></tr></table></figure>
-<p>代表没有安装mysql，需要在线安装mysql。输入下面几行命令即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#安装 MySQL 服务端、核心程序</span><br><span class="line">sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">#安装 MySQL 客户端</span><br><span class="line">sudo apt-get install mysql-client</span><br></pre></td></tr></table></figure>
-<p>在安装过程中会提示确认输入 YES，设置 root 用户密码（之后也可以修改）等，稍等片刻便可安装成功。</p>
-<p>安装结束后，用命令验证是否安装并启动成功：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tap | grep mysql</span><br></pre></td></tr></table></figure>
-<p>如果提示有tcp信息，说明安装成功，可以使用下面的命令按照自己的需求对数据库进行配置。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure>
-<p>安装成功。</p>
-<h2 id="数据库常用命令"><a href="#数据库常用命令" class="headerlink" title="数据库常用命令"></a>数据库常用命令</h2><h3 id="1-打开mysql"><a href="#1-打开mysql" class="headerlink" title="1.打开mysql"></a>1.打开mysql</h3><p>使用如下两条命令，打开 MySQL 服务并使用 root 用户登录：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql start</span><br><span class="line">mysql -u root   #会让你输入root密码，如果安装时没让您输入root密码的话，</span><br></pre></td></tr></table></figure>
-<p>登陆成功，会显示welcome to the Mysql。</p>
-<h3 id="2-查看数据库"><a href="#2-查看数据库" class="headerlink" title="2.查看数据库"></a>2.查看数据库</h3><p>命令 <span style="color:red;font-size:文字大小;font-family:字体;"><strong>show databases；</strong></span>查看有哪些数据库，<strong>注意不要漏掉；</strong></p>
-<h3 id="3-链接数据库"><a href="#3-链接数据库" class="headerlink" title="3.链接数据库"></a>3.链接数据库</h3><p>命令为<span style="color:red;font-size:文字大小;font-family:字体;"> <strong>use &lt;数据库名字&gt;</strong></span>，这里可以不用加分号，我们可以选择任意一个数据库，比如</p>
-<h3 id="4-查看数据库"><a href="#4-查看数据库" class="headerlink" title="4.查看数据库"></a>4.查看数据库</h3><p>命令<span style="color:red;font-size:文字大小;font-family:字体;"> <strong>show tables;</strong></span> <strong>注意不要漏掉；</strong> 退出数据库可用 exit 或者 quit。</p>
-<h2 id="数据库练习操作"><a href="#数据库练习操作" class="headerlink" title="数据库练习操作"></a>数据库练习操作</h2><h3 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h3><p>使用命令 <span style="color:red;font-size:文字大小;font-family:字体;"> <strong>create database <databasename>;</strong></span> 注意不漏掉分号，也不要给database加s。创建成功之后，可以使用命令 <span style="color:red;font-size:文字大小;font-family:字体;"> <strong>show databases;</strong></span> 查看已经建立好的数据库，在大多数系统中，sql语句不区分大小写。</p>
-<h3 id="2-连接数据库"><a href="#2-连接数据库" class="headerlink" title="2.连接数据库"></a>2.连接数据库</h3><p>命令 <span style="color:red;font-size:文字大小;font-family:字体;"> <strong>use <databasename>;</strong></span> 显示database changed，则链接成功，可以使用show tables; 看数据库中有哪些表。</p>
-<h3 id="3-数据表"><a href="#3-数据表" class="headerlink" title="3.数据表"></a>3.数据表</h3><p>数据表（<code>table</code>）简称表，它是数据库最重要的组成部分之一。数据库只是一个框架，表才是实质内容。</p>
-<p>而一个数据库中一般会有多张表，这些各自独立的表通过建立关系被联接起来，才成为可以交叉查阅、一目了然的数据库。如下便是一张表：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>name</th>
-<th>phone</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>01</td>
-<td>Tom</td>
-<td>110110110</td>
-</tr>
-<tr>
-<td>02</td>
-<td>Jack</td>
-<td>119119119</td>
-</tr>
-<tr>
-<td>03</td>
-<td>Rose</td>
-<td>114114114</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="4-新建数据库表"><a href="#4-新建数据库表" class="headerlink" title="4.新建数据库表"></a>4.新建数据库表</h3><p>新建表语句格式为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE name(</span><br><span class="line">列名a 数据类型,</span><br><span class="line">列名b 数据类型，</span><br><span class="line">列名c 数据类型</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>注意不要忘记加分号（需要加分号的需要总结，可以看文章最后面）。</p>
-<p>例子，比如在公司数据库中建立一个employee的表：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE employee(</span><br><span class="line">id int(10),</span><br><span class="line">name char(20),</span><br><span class="line">phone int(12)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<h3 id="5-数据类型"><a href="#5-数据类型" class="headerlink" title="5.数据类型"></a>5.数据类型</h3><p>数据库中常用的数据类型可以见下表：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>大小(字节)</th>
-<th>用途</th>
-<th>格式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>INT</td>
-<td>4</td>
-<td>整数</td>
-<td></td>
-</tr>
-<tr>
-<td>FLOAT</td>
-<td>4</td>
-<td>单精度浮点数</td>
-<td></td>
-</tr>
-<tr>
-<td>DOUBLE</td>
-<td>8</td>
-<td>双精度浮点数</td>
-<td></td>
-</tr>
-<tr>
-<td>ENUM</td>
-<td>—</td>
-<td>单选,比如性别</td>
-<td>ENUM(‘a’,’b’,’c’)</td>
-</tr>
-<tr>
-<td>SET</td>
-<td>—</td>
-<td>多选</td>
-<td>SET(‘1’,’2’,’3’)</td>
-</tr>
-<tr>
-<td>DATE</td>
-<td>3</td>
-<td>日期</td>
-<td>YYYY-MM-DD</td>
-</tr>
-<tr>
-<td>TIME</td>
-<td>3</td>
-<td>时间点或持续时间</td>
-<td>HH:MM:SS</td>
-</tr>
-<tr>
-<td>YEAR</td>
-<td>1</td>
-<td>年份值</td>
-<td>YYYY</td>
-</tr>
-<tr>
-<td>CHAR</td>
-<td>0~255</td>
-<td>定长字符串</td>
-<td></td>
-</tr>
-<tr>
-<td>VARCHAR</td>
-<td>0~255</td>
-<td>变长字符串</td>
-<td></td>
-</tr>
-<tr>
-<td>TEXT</td>
-<td>0~65535</td>
-<td>长文本数据</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>CHAR 和 VARCHAR 的区别:</strong> CHAR 的长度是固定的，而 VARCHAR 的长度是可以变化的，比如，存储字符串 “abc”，对于 CHAR(10)，表示存储的字符将占 10 个字节(包括 7 个空字符)，而同样的 VARCHAR(12) 则只占用 4 个字节的长度，<code>增加一个额外字节来存储字符串本身的长度</code>，12 只是最大值，当你存储的字符小于 12 时，按实际长度存储。</p>
-<h3 id="6-插入数据"><a href="#6-插入数据" class="headerlink" title="6.插入数据"></a>6.插入数据</h3><p>插入语句为:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO 表名(列名a,列名b，列名c) VALUES(值1，值2，值3);</span><br><span class="line">比如向表employee中插入三个人的数据：</span><br><span class="line">INSERT INTO employee(id,name,phone) VALUES(123,&#x27;TOM&#x27;,245);</span><br><span class="line">INSERT INTO employee(id,name,phone) VALUES(133,&#x27;Jacky&#x27;,235);</span><br><span class="line">INSERT INTO employee(id,name) VALUES(143,&#x27;Bob&#x27;);</span><br></pre></td></tr></table></figure>
-<p>注意有些数据类型在插入的时候需要用单引号括起来，比如Tom Jacky Bob,因为他们的数据类型是char，类似的数据类型有VARCHAR,ENUM,TEXT,DATE,TIME等。</p>
-<p>对于第三个语句，其phone的值为null。<strong>并且注意挨着括号的不能有逗号。</strong></p>
-<p>插入完成之后可以使用  <span style="color:red;font-size:文字大小;font-family:字体;"> select * from employee; </span>命令查看一下插入是否成功。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://Bihanso.github.io">Bihanso</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://bihanso.github.io/7043975b.html">http://bihanso.github.io/7043975b.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://Bihanso.github.io" target="_blank">Reckless</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/Bihanso.github.io/img/a.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/Bihanso.github.io/4a17b156.html" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/Bihanso.github.io/img/a.png" onerror="this.onerror=null;this.src='/Bihanso.github.io/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bihanso</div><div class="author-info__description">希望涅槃</div></div><div class="card-info-data site-data is-center"><a href="/Bihanso.github.io/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/Bihanso.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/Bihanso.github.io/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.</span> <span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">Linux安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.2.</span> <span class="toc-text">数据库常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%89%93%E5%BC%80mysql"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.打开mysql</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.查看数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.链接数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.查看数据库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%83%E4%B9%A0%E6%93%8D%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text">数据库练习操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.连接数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.数据表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%96%B0%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.新建数据库表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.插入数据</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Bihanso.github.io/e0624da7.html" title="北京旅游小记">北京旅游小记</a><time datetime="2023-03-05T09:08:56.427Z" title="发表于 2023-03-05 17:08:56">2023-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Bihanso.github.io/7043975b.html" title="数据库学习.md">数据库学习.md</a><time datetime="2023-03-05T09:02:12.000Z" title="发表于 2023-03-05 17:02:12">2023-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Bihanso.github.io/4a17b156.html" title="Hello World">Hello World</a><time datetime="2023-03-03T06:22:11.189Z" title="发表于 2023-03-03 14:22:11">2023-03-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Bihanso.github.io/7043975b.html" title="数据库学习.md">数据库学习.md</a><time datetime="2023-02-05T09:02:12.000Z" title="发表于 2023-02-05 17:02:12">2023-02-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Bihanso</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/Bihanso.github.io/js/utils.js"></script><script src="/Bihanso.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script type='text/javascript' src='https://ajax.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script id="dsq-count-scr" src="//https-www-dhndzwxj-top.disqus.com/count.js" async></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/Bihanso.github.io/js/search/local-search.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+<link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/Bihanso.github.io/img/a.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/Bihanso.github.io/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/Bihanso.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/Bihanso.github.io/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/Bihanso.github.io/" title="Reckless"><span class="site-name">Reckless</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据库学习.md</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-05T09:02:12.000Z" title="发表于 2023-03-05 17:02:12">2023-03-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-05T09:03:46.463Z" title="更新于 2023-03-05 17:03:46">2023-03-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">0</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库学习.md"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://Bihanso.github.io">Bihanso</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://bihanso.github.io/7043975b.html">http://bihanso.github.io/7043975b.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://Bihanso.github.io" target="_blank">Reckless</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/Bihanso.github.io/img/a.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/Bihanso.github.io/0.html" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/Bihanso.github.io/img/a.png" onerror="this.onerror=null;this.src='/Bihanso.github.io/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bihanso</div><div class="author-info__description">希望涅槃</div></div><div class="card-info-data site-data is-center"><a href="/Bihanso.github.io/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/Bihanso.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/Bihanso.github.io/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Bihanso.github.io/e0624da7.html" title="北京旅游小记">北京旅游小记</a><time datetime="2023-03-05T09:08:56.427Z" title="发表于 2023-03-05 17:08:56">2023-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Bihanso.github.io/0.html" title="无题">无题</a><time datetime="2023-03-05T09:03:26.331Z" title="发表于 2023-03-05 17:03:26">2023-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Bihanso.github.io/7043975b.html" title="数据库学习.md">数据库学习.md</a><time datetime="2023-03-05T09:02:12.000Z" title="发表于 2023-03-05 17:02:12">2023-03-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Bihanso</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/Bihanso.github.io/js/utils.js"></script><script src="/Bihanso.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script type='text/javascript' src='https://ajax.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script id="dsq-count-scr" src="//https-www-dhndzwxj-top.disqus.com/count.js" async></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/Bihanso.github.io/js/search/local-search.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
   function butterfly_clock_anzhiyu_injector_config(){
     var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
     var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
